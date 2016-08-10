@@ -31,6 +31,8 @@
                         ];
     //本地图片
     NSArray *array = @[@"home_1",@"home_2",@"home_3",@"home_4",@"home_5",@"home_6",@"home_7"];
+    
+    
     //网络图片
     NSArray *myWebArray = @[
                             
@@ -45,9 +47,12 @@
     LZBannerView *scrollView = [LZBannerView cycleScrollViewWithFrame:CGRectMake(0, 100, self.view.frame.size.width, self.view.frame.size.width * 3 / 4) WithCycleStyle:LZCycleStyleHorizontal WithBannerSource:LZBannerStyleOnlyLocalSource];
     scrollView.backgroundColor = [UIColor blueColor];
     
+    scrollView.titleLabelBackgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
     scrollView.localizationImage = [UIImage imageNamed:@"xx_ico"];
     scrollView.deleGate = self;
-//    scrollView.titleArray = titles;
+    
+    //PS:如果是图片加标题的话   titleArray.count 必须等于 imageArray.count
+    scrollView.titleArray = array;
     scrollView.imageArray = array;
     [self.view addSubview:scrollView];
     

@@ -85,7 +85,8 @@
     }else{
         _imageView.frame = self.bounds;
         
-        
+        _titleLable.frame = CGRectMake(0, self.frame.size.height - 21, self.frame.size.width, 21);
+//        _titleLable.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1];
     }
     
     
